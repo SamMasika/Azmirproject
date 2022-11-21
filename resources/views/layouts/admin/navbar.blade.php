@@ -1,57 +1,178 @@
-<div class="header-container fixed-top">
-    <header class="header navbar navbar-expand-sm">
-        <a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></a>
+
+        <header id="page-topbar">
+            <div class="layout-width">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box horizontal-logo">
+                            <a href="index-2.html" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="assets/images/logo-sm.png" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo-dark.png" alt="" height="17">
+                                </span>
+                            </a>
         
-        <ul class="navbar-item flex-row">
-            <li class="nav-item align-self-center page-heading">
-                <div class="page-header">
-                    <div class="page-title">
-                        <h3>Sales Dashboard</h3>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <ul class="navbar-item flex-row search-ul">
-            <li class="nav-item align-self-center search-animated">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search toggle-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                <form class="form-inline search-full form-inline search" role="search">
-                    <div class="search-bar">
-                        <input type="text" class="form-control search-form-control  ml-lg-auto" placeholder="Search...">
-                    </div>
-                </form>
-            </li>
-        </ul>
-        <ul class="navbar-item flex-row navbar-dropdown">
-           
-          
-
-         
-
-            <li class="nav-item dropdown user-profile-dropdown  order-lg-0 order-1">
-                <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                </a>
-                <div class="dropdown-menu position-absolute" aria-labelledby="userProfileDropdown">
-                    <div class="">
-                        <div class="dropdown-item">
-                            <a class="" href="user_profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> My Profile</a>
+                            <a href="index-2.html" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="assets/images/logo-sm.png" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo-light.png" alt="" height="17">
+                                </span>
+                            </a>
                         </div>
-                        <div class="dropdown-item">
-                            <a class="" href="apps_mailbox.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-inbox"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg> Inbox</a>
-                        </div>
-                        <div class="dropdown-item">
-                            <a class="" href="auth_lockscreen.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Lock Screen</a>
-                        </div>
-                        <div class="dropdown-item">
-                            <a class="" href="{{ url('logout') }}"   onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg> Sign Out</a>
-                        </div>
-                        <form id="logout-form" action="{{ url('logout') }}" method="POST" class="d-none">
-                            @csrf
+        
+                        <button type="button" class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger"
+                            id="topnav-hamburger-icon">
+                            <span class="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+        
+                        <!-- App Search-->
+                        <form class="app-search d-none d-md-block">
+                            <div class="position-relative">
+                                <input type="text" class="form-control" placeholder="Search..." autocomplete="off"
+                                    id="search-options" value="">
+                                <span class="mdi mdi-magnify search-widget-icon"></span>
+                                <span class="mdi mdi-close-circle search-widget-icon search-widget-icon-close d-none"
+                                    id="search-close-options"></span>
+                            </div>
+                            <div class="dropdown-menu dropdown-menu-lg" id="search-dropdown">
+                                <div data-simplebar style="max-height: 320px;">
+                                    <!-- item-->
+                                    <div class="dropdown-header">
+                                        <h6 class="text-overflow text-muted mb-0 text-uppercase">Recent Searches</h6>
+                                    </div>
+        
+                                    <div class="dropdown-item bg-transparent text-wrap">
+                                        <a href="index-2.html" class="btn btn-soft-secondary btn-sm btn-rounded">how to setup <i
+                                                class="mdi mdi-magnify ms-1"></i></a>
+                                        <a href="index-2.html" class="btn btn-soft-secondary btn-sm btn-rounded">buttons <i
+                                                class="mdi mdi-magnify ms-1"></i></a>
+                                    </div>
+                                    <!-- item-->
+                                    <div class="dropdown-header mt-2">
+                                        <h6 class="text-overflow text-muted mb-1 text-uppercase">Pages</h6>
+                                    </div>
+        
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="ri-bubble-chart-line align-middle fs-18 text-muted me-2"></i>
+                                        <span>Analytics Dashboard</span>
+                                    </a>
+        
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="ri-lifebuoy-line align-middle fs-18 text-muted me-2"></i>
+                                        <span>Help Center</span>
+                                    </a>
+        
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="ri-user-settings-line align-middle fs-18 text-muted me-2"></i>
+                                        <span>My account settings</span>
+                                    </a>
+        
+                                    <!-- item-->
+                                    <div class="dropdown-header mt-2">
+                                        <h6 class="text-overflow text-muted mb-2 text-uppercase">Members</h6>
+                                    </div>
+        
+                                    <div class="notification-list">
+                                        <!-- item -->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
+                                            <div class="d-flex">
+                                                <img src="assets/images/users/avatar-2.jpg"
+                                                    class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                                <div class="flex-1">
+                                                    <h6 class="m-0">Angela Bernier</h6>
+                                                    <span class="fs-11 mb-0 text-muted">Manager</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- item -->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
+                                            <div class="d-flex">
+                                                <img src="assets/images/users/avatar-3.jpg"
+                                                    class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                                <div class="flex-1">
+                                                    <h6 class="m-0">David Grasso</h6>
+                                                    <span class="fs-11 mb-0 text-muted">Web Designer</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- item -->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
+                                            <div class="d-flex">
+                                                <img src="assets/images/users/avatar-5.jpg"
+                                                    class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                                <div class="flex-1">
+                                                    <h6 class="m-0">Mike Bunch</h6>
+                                                    <span class="fs-11 mb-0 text-muted">React Developer</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+        
+                                <div class="text-center pt-3 pb-1">
+                                    <a href="pages-search-results.html" class="btn btn-primary btn-sm">View All Results <i
+                                            class="ri-arrow-right-line ms-1"></i></a>
+                                </div>
+                            </div>
                         </form>
                     </div>
+        
+                    <div class="d-flex align-items-center">
+        
+                    
+        
+        
+                    
+                        <div class="ms-1 header-item d-none d-sm-flex">
+                            <button type="button"
+                                class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle light-dark-mode">
+                                <i class='bx bx-moon fs-22'></i>
+                            </button>
+                        </div>
+        
+                      
+                        <div class="dropdown ms-sm-3 header-item topbar-user">
+                            <button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span class="d-flex align-items-center">
+                                    <img class="rounded-circle header-profile-user" src="{{asset('admin/assets/images/users/avatar-1.jpg')}}"
+                                        alt="Header Avatar">
+                                    <span class="text-start ms-xl-2">
+                                        <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">User</span>
+                                        {{-- <span class="d-none d-xl-block ms-1 fs-12 text-muted user-name-sub-text">Founder</span> --}}
+                                    </span>
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <!-- item-->
+                                <h6 class="dropdown-header">Welcome Anna!</h6>
+                               
+                                <a class="dropdown-item" href="pages-profile-settings.html"><span
+                                        class="badge bg-soft-success text-success mt-1 float-end">New</span><i
+                                        class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"></i> <span
+                                        class="align-middle">Settings</span></a>
+                              
+                                <a class="dropdown-item" href="{{ url('logout') }}"
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
+                                        class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span
+                                        class="align-middle" data-key="t-logout">Logout</span></a>
+                                        <form id="logout-form" action="{{ url('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </li>
-        </ul>
-    </header>
-</div>
-
+            </div>
+        </header>

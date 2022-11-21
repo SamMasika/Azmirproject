@@ -1,456 +1,1304 @@
 @extends('layouts.master')
 
 @section('content')
-<div id="content" class="main-content">
-    <div class="layout-px-spacing">
-        <div class="row layout-top-spacing">
+<div class="main-content">
+    <div class="page-content">
+        <div class="container-fluid">
 
-            <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
-                <div class="widget widget-one">
-                    <div class="widget-heading">
-                        <h6 class="">Statistics</h6>
-                    </div>
-                    <div class="w-chart">
-                        <div class="w-chart-section">
-                            <div class="w-detail">
-                                <p class="w-title">Total Visits</p>
-                                <p class="w-stats">423,964</p>
-                            </div>
-                            <div class="w-chart-render-one">
-                                <div id="total-users"></div>
-                            </div>
-                        </div>
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                        <h4 class="mb-sm-0">Dashboard</h4>
 
-                        <div class="w-chart-section">
-                            <div class="w-detail">
-                                <p class="w-title">Paid Visits</p>
-                                <p class="w-stats">7,929</p>
-                            </div>
-                            <div class="w-chart-render-one">
-                                <div id="paid-visits"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 layout-spacing">
-                <div class="widget widget-account-invoice-two">
-                    <div class="widget-content">
-                        <div class="account-box">
-                            <div class="info">
-                                <h5 class="">Pro Plan</h5>
-                                <p class="inv-balance">$10,344</p>
-                            </div>
-                            <div class="acc-action">
-                                <div class="">
-                                    <a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></a>
-                                    <a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg></a>
-                                </div>
-                                <a href="javascript:void(0);">Upgrade</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 layout-spacing">
-                <div class="widget widget-card-four">
-                    <div class="widget-content">
-                        <div class="w-content">
-                            <div class="w-info">
-                                <h6 class="value">$ 45,141</h6>
-                                <p class="">Expenses</p>
-                            </div>
-                            <div class="">
-                                <div class="w-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-gradient-secondary" role="progressbar" style="width: 57%" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 layout-spacing">
-                <div class="widget widget-card-four">
-                    <div class="widget-content">
-                        <div class="w-content">
-                            <div class="w-info">
-                                <h6 class="value">$ 45,141</h6>
-                                <p class="">Expenses</p>
-                            </div>
-                            <div class="">
-                                <div class="w-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-gradient-secondary" role="progressbar" style="width: 57%" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
-                <div class="widget widget-chart-three">
-                    <div class="widget-heading">
-                        <div class="">
-                            <h5 class="">Unique Visitors</h5>
-                        </div>
-
-                        <div class="dropdown  custom-dropdown">
-                            <a class="dropdown-toggle" href="#" role="button" id="uniqueVisitors" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="uniqueVisitors">
-                                <a class="dropdown-item" href="javascript:void(0);">View</a>
-                                <a class="dropdown-item" href="javascript:void(0);">Update</a>
-                                <a class="dropdown-item" href="javascript:void(0);">Download</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="widget-content">
-                        <div id="uniqueVisits"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
-                <div class="widget widget-activity-three">
-
-                    <div class="widget-heading">
-                        <h5 class="">Notifications</h5>
-                    </div>
-
-                    <div class="widget-content">
-
-                        <div class="mt-container mx-auto">
-                            <div class="timeline-line">
-                                
-                                <div class="item-timeline timeline-new">
-                                    <div class="t-dot">
-                                        <div class="t-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                                    </div>
-                                    <div class="t-content">
-                                        <div class="t-uppercontent">
-                                            <h5>Logs</h5>
-                                            <span class="">27 Feb, 2020</span>
-                                        </div>
-                                        <p><span>Updated</span> Server Logs</p>
-                                        <div class="tags">
-                                            <div class="badge badge-primary">Logs</div>
-                                            <div class="badge badge-success">CPanel</div>
-                                            <div class="badge badge-warning">Update</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-timeline timeline-new">
-                                    <div class="t-dot">
-                                        <div class="t-success"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
-                                    </div>
-                                    <div class="t-content">
-                                        <div class="t-uppercontent">
-                                            <h5>Mail</h5>
-                                            <span class="">28 Feb, 2020</span>
-                                        </div>
-                                        <p>Send Mail to <a href="javascript:void(0);">HR</a> and <a href="javascript:void(0);">Admin</a></p>
-                                        <div class="tags">
-                                            <div class="badge badge-primary">Admin</div>
-                                            <div class="badge badge-success">HR</div>
-                                            <div class="badge badge-warning">Mail</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-timeline timeline-new">
-                                    <div class="t-dot">
-                                        <div class="t-danger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                                    </div>
-                                    <div class="t-content">
-                                        <div class="t-uppercontent">
-                                            <h5>Task Completed</h5>
-                                            <span class="">01 Mar, 2020</span>
-                                        </div>
-                                        <p>Backup <span>Files EOD</span></p>
-                                        <div class="tags">
-                                            <div class="badge badge-primary">Backup</div>
-                                            <div class="badge badge-success">EOD</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-timeline timeline-new">
-                                    <div class="t-dot">
-                                        <div class="t-warning"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg></div>
-                                    </div>
-                                    <div class="t-content">
-                                        <div class="t-uppercontent">
-                                            <h5>Collect Docs</h5>
-                                            <span class="">10 Mar, 2020</span>
-                                        </div>
-                                        <p>Collected documents from <a href="javascript:void(0);">Sara</a></p>
-                                        <div class="tags">
-                                            <div class="badge badge-success">Collect</div>
-                                            <div class="badge badge-warning">Docs</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-timeline timeline-new">
-                                    <div class="t-dot">
-                                        <div class="t-dark"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-server"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6" y2="6"></line><line x1="6" y1="18" x2="6" y2="18"></line></svg></div>
-                                    </div>
-                                    <div class="t-content">
-                                        <div class="t-uppercontent">
-                                            <h5>Reboot</h5>
-                                            <span class="">06 Apr, 2020</span>
-                                        </div>
-                                        <p>Server rebooted successfully</p>
-                                        <div class="tags">
-                                            <div class="badge badge-warning">Reboot</div>
-                                            <div class="badge badge-primary">Server</div>
-                                        </div>
-                                    </div>
-                                </div>                                      
-                            </div>                                    
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
-                <div class="widget-four">
-                    <div class="widget-heading">
-                        <h5 class="">Visitors by Browser</h5>
-                    </div>
-                    <div class="widget-content">
-                        <div class="vistorsBrowser">
-                            <div class="browser-list">
-                                <div class="w-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chrome"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle><line x1="21.17" y1="8" x2="12" y2="8"></line><line x1="3.95" y1="6.06" x2="8.54" y2="14"></line><line x1="10.88" y1="21.94" x2="15.46" y2="14"></line></svg>
-                                </div>
-                                <div class="w-browser-details">
-                                    <div class="w-browser-info">
-                                        <h6>Chrome</h6>
-                                        <p class="browser-count">65%</p>
-                                    </div>
-                                    <div class="w-browser-stats">
-                                        <div class="progress">
-                                            <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 65%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="browser-list">
-                                <div class="w-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-compass"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
-                                </div>
-                                <div class="w-browser-details">
-                                    
-                                    <div class="w-browser-info">
-                                        <h6>Safari</h6>
-                                        <p class="browser-count">25%</p>
-                                    </div>
-
-                                    <div class="w-browser-stats">
-                                        <div class="progress">
-                                            <div class="progress-bar bg-gradient-danger" role="progressbar" style="width: 35%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="browser-list">
-                                <div class="w-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                                </div>
-                                <div class="w-browser-details">
-                                    
-                                    <div class="w-browser-info">
-                                        <h6>Others</h6>
-                                        <p class="browser-count">15%</p>
-                                    </div>
-
-                                    <div class="w-browser-stats">
-                                        <div class="progress">
-                                            <div class="progress-bar bg-gradient-warning" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
+                                <li class="breadcrumb-item active">Dashboard</li>
+                            </ol>
                         </div>
 
                     </div>
                 </div>
             </div>
+            <!-- end page title -->
 
-            <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
-                <div class="row widget-statistic">
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
-                        <div class="widget widget-one_hybrid widget-followers">
-                            <div class="widget-heading">
-                                <div class="w-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                                </div>
-                                <p class="w-value">31.6K</p>
-                                <h5 class="">Followers</h5>
+            <div class="row">
+                <div class="col">
+
+                    <div class="h-100">
+                        <div class="row mb-3 pb-1">
+                            <div class="col-12">
+                                <div class="d-flex align-items-lg-center flex-lg-row flex-column">
+                                    <div class="flex-grow-1">
+                                        <h4 class="fs-16 mb-1"> Welcome, Anna!</h4>
+                                        {{-- <p class="text-muted mb-0">Here's what's happening with your store today.</p> --}}
+                                    </div>
+                                    <div class="mt-3 mt-lg-0">
+                                        <form action="javascript:void(0);">
+                                            <div class="row g-3 mb-0 align-items-center">
+                                                <div class="col-sm-auto">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control border-0 dash-filter-picker shadow" data-provider="flatpickr" data-range-date="true" data-date-format="d M, Y" data-deafult-date="01 Jan 2022 to 31 Jan 2022">
+                                                        <div class="input-group-text bg-primary border-primary text-white">
+                                                            <i class="ri-calendar-2-line"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-auto">
+                                                    <button type="button" class="btn btn-soft-success"><i class="ri-add-circle-line align-middle me-1"></i> Add Product</button>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-auto">
+                                                    <button type="button" class="btn btn-soft-info btn-icon waves-effect waves-light layout-rightside-btn"><i class="ri-pulse-line"></i></button>
+                                                </div>
+                                                <!--end col-->
+                                            </div>
+                                            <!--end row-->
+                                        </form>
+                                    </div>
+                                </div><!-- end card header -->
                             </div>
-                            <div class="widget-content">    
-                                <div class="w-chart">
-                                    <div id="hybrid_followers"></div>
-                                </div>
-                            </div>
+                            <!--end col-->
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
-                        <div class="widget widget-one_hybrid widget-referral">
-                            <div class="widget-heading">
-                                <div class="w-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                        <!--end row-->
+
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <!-- card -->
+                                <div class="card card-animate">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1 overflow-hidden">
+                                                <p class="text-uppercase fw-medium text-muted text-truncate mb-0"> Total Earnings</p>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                {{-- <h5 class="text-success fs-14 mb-0">
+                                                    <i class="ri-arrow-right-up-line fs-13 align-middle"></i> +16.24 %
+                                                </h5> --}}
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-end justify-content-between mt-4">
+                                            <div>
+                                                <h4 class="fs-22 fw-semibold ff-secondary mb-4">$<span class="counter-value" data-target="559.25">0</span>k </h4>
+                                                <a href="#" class="text-decoration-underline">View net earnings</a>
+                                            </div>
+                                            <div class="avatar-sm flex-shrink-0">
+                                                <span class="avatar-title bg-soft-success rounded fs-3">
+                                                    <i class="bx bx-dollar-circle text-success"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end card body -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+
+                            <div class="col-xl-3 col-md-6">
+                                <!-- card -->
+                                <div class="card card-animate">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1 overflow-hidden">
+                                             <p class="text-uppercase fw-medium text-muted text-truncate mb-0">Orders</p>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                {{-- <h5 class="text-danger fs-14 mb-0">
+                                                    <i class="ri-arrow-right-down-line fs-13 align-middle"></i> -3.57 %
+                                                </h5> --}}
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-end justify-content-between mt-4">
+                                            <div>
+                                                <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="36894">0</span></h4>
+                                                <a href="#" class="text-decoration-underline">View all orders</a>
+                                            </div>
+                                            <div class="avatar-sm flex-shrink-0">
+                                                <span class="avatar-title bg-soft-info rounded fs-3">
+                                                    <i class="bx bx-shopping-bag text-info"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end card body -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+
+                            <div class="col-xl-3 col-md-6">
+                                <!-- card -->
+                                <div class="card card-animate">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1 overflow-hidden">
+                                                <p class="text-uppercase fw-medium text-muted text-truncate mb-0">Customers</p>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                {{-- <h5 class="text-success fs-14 mb-0">
+                                                    <i class="ri-arrow-right-up-line fs-13 align-middle"></i> +29.08 %
+                                                </h5> --}}
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-end justify-content-between mt-4">
+                                            <div>
+                                                <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="183.35">0</span>M </h4>
+                                                <a href="#" class="text-decoration-underline">See details</a>
+                                            </div>
+                                            <div class="avatar-sm flex-shrink-0">
+                                                <span class="avatar-title bg-soft-warning rounded fs-3">
+                                                    <i class="bx bx-user-circle text-warning"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end card body -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+
+                            <div class="col-xl-3 col-md-6">
+                                <!-- card -->
+                                <div class="card card-animate">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1 overflow-hidden">
+                                                <p class="text-uppercase fw-medium text-muted text-truncate mb-0"> My Balance</p>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                {{-- <h5 class="text-muted fs-14 mb-0">
+                                                    +0.00 %
+                                                </h5> --}}
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-end justify-content-between mt-4">
+                                            <div>
+                                                <h4 class="fs-22 fw-semibold ff-secondary mb-4">$<span class="counter-value" data-target="165.89">0</span>k </h4>
+                                                <a href="#" class="text-decoration-underline">Withdraw money</a>
+                                            </div>
+                                            <div class="avatar-sm flex-shrink-0">
+                                                <span class="avatar-title bg-soft-primary rounded fs-3">
+                                                    <i class="bx bx-wallet text-primary"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end card body -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+                        </div> <!-- end row-->
+
+                        <div class="row">
+                            <div class="col-xl-8">
+                                <div class="card">
+                                    <div class="card-header border-0 align-items-center d-flex">
+                                        <h4 class="card-title mb-0 flex-grow-1">Revenue</h4>
+                                        <div>
+                                            <button type="button" class="btn btn-soft-secondary btn-sm">
+                                                ALL
+                                            </button>
+                                            <button type="button" class="btn btn-soft-secondary btn-sm">
+                                                1M
+                                            </button>
+                                            <button type="button" class="btn btn-soft-secondary btn-sm">
+                                                6M
+                                            </button>
+                                            <button type="button" class="btn btn-soft-primary btn-sm">
+                                                1Y
+                                            </button>
+                                        </div>
+                                    </div><!-- end card header -->
+
+                                    <div class="card-header p-0 border-0 bg-soft-light">
+                                        <div class="row g-0 text-center">
+                                            <div class="col-6 col-sm-3">
+                                                <div class="p-3 border border-dashed border-start-0">
+                                                    <h5 class="mb-1"><span class="counter-value" data-target="7585">0</span></h5>
+                                                    <p class="text-muted mb-0">Orders</p>
+                                                </div>
+                                            </div>
+                                            <!--end col-->
+                                            <div class="col-6 col-sm-3">
+                                                <div class="p-3 border border-dashed border-start-0">
+                                                    <h5 class="mb-1">$<span class="counter-value" data-target="22.89">0</span>k</h5>
+                                                    <p class="text-muted mb-0">Earnings</p>
+                                                </div>
+                                            </div>
+                                            <!--end col-->
+                                            <div class="col-6 col-sm-3">
+                                                <div class="p-3 border border-dashed border-start-0">
+                                                    <h5 class="mb-1"><span class="counter-value" data-target="367">0</span></h5>
+                                                    <p class="text-muted mb-0">Refunds</p>
+                                                </div>
+                                            </div>
+                                            <!--end col-->
+                                            <div class="col-6 col-sm-3">
+                                                <div class="p-3 border border-dashed border-start-0 border-end-0">
+                                                    <h5 class="mb-1 text-success"><span class="counter-value" data-target="18.92">0</span>%</h5>
+                                                    <p class="text-muted mb-0">Conversation Ratio</p>
+                                                </div>
+                                            </div>
+                                            <!--end col-->
+                                        </div>
+                                    </div><!-- end card header -->
+
+                                    <div class="card-body p-0 pb-2">
+                                        <div class="w-100">
+                                            <div id="customer_impression_charts" data-colors='["--vz-primary", "--vz-success", "--vz-danger"]' class="apex-charts" dir="ltr"></div>
+                                        </div>
+                                    </div><!-- end card body -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+
+                            <div class="col-xl-4">
+                                <!-- card -->
+                                <div class="card card-height-100">
+                                    <div class="card-header align-items-center d-flex">
+                                        <h4 class="card-title mb-0 flex-grow-1">Sales by Locations</h4>
+                                        <div class="flex-shrink-0">
+                                            <button type="button" class="btn btn-soft-primary btn-sm">
+                                                Export Report
+                                            </button>
+                                        </div>
+                                    </div><!-- end card header -->
+
+                                    <!-- card body -->
+                                    <div class="card-body">
+
+                                        <div id="sales-by-locations" data-colors='["--vz-light", "--vz-success", "--vz-primary"]' style="height: 269px" dir="ltr"></div>
+
+                                        <div class="px-2 py-2 mt-1">
+                                            <p class="mb-1">Canada <span class="float-end">75%</span></p>
+                                            <div class="progress mt-2" style="height: 6px;">
+                                                <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="75"></div>
+                                            </div>
+
+                                            <p class="mt-3 mb-1">Greenland <span class="float-end">47%</span>
+                                            </p>
+                                            <div class="progress mt-2" style="height: 6px;">
+                                                <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 47%" aria-valuenow="47" aria-valuemin="0" aria-valuemax="47"></div>
+                                            </div>
+
+                                            <p class="mt-3 mb-1">Russia <span class="float-end">82%</span></p>
+                                            <div class="progress mt-2" style="height: 6px;">
+                                                <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="82"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end card body -->
                                 </div>
-                                <p class="w-value">1,900</p>
-                                <h5 class="">Referral</h5>
+                                <!-- end card -->
                             </div>
-                            <div class="widget-content">    
-                                <div class="w-chart">
-                                    <div id="hybrid_followers1"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
-                        <div class="widget widget-one_hybrid widget-engagement">
-                            <div class="widget-heading">
-                                <div class="w-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                                </div>
-                                <p class="w-value">18.2%</p>
-                                <h5 class="">Engagement</h5>
-                            </div>
-                            <div class="widget-content">    
-                                <div class="w-chart">
-                                    <div id="hybrid_followers3"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 layout-spacing">
-                <div class="widget widget-card-one">
-                    <div class="widget-content">
-
-                        <div class="media">
-                            <div class="w-img">
-                                <img src="assets/img/90x90.jpg" alt="avatar">
-                            </div>
-                            <div class="media-body">
-                                <h6>Jimmy Turner</h6>
-                                <p class="meta-date-time">Monday, Nov 18</p>
-                            </div>
+                            <!-- end col -->
                         </div>
 
-                        <p>"Duis aute irure dolor" in reprehenderit in voluptate velit esse cillum "dolore eu fugiat" nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-header align-items-center d-flex">
+                                        <h4 class="card-title mb-0 flex-grow-1">Best Selling Products</h4>
+                                        <div class="flex-shrink-0">
+                                            <div class="dropdown card-header-dropdown">
+                                                <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="fw-semibold text-uppercase fs-12">Sort by:
+                                                    </span><span class="text-muted">Today<i class="mdi mdi-chevron-down ms-1"></i></span>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" href="#">Today</a>
+                                                    <a class="dropdown-item" href="#">Yesterday</a>
+                                                    <a class="dropdown-item" href="#">Last 7 Days</a>
+                                                    <a class="dropdown-item" href="#">Last 30 Days</a>
+                                                    <a class="dropdown-item" href="#">This Month</a>
+                                                    <a class="dropdown-item" href="#">Last Month</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- end card header -->
 
-                        <div class="w-action">
-                            <div class="card-like">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-thumbs-up"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
-                                <span>551 Likes</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive table-card">
+                                            <table class="table table-hover table-centered align-middle table-nowrap mb-0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="avatar-sm bg-light rounded p-1 me-2">
+                                                                    <img src="assets/images/products/img-1.png" alt="" class="img-fluid d-block" />
+                                                                </div>
+                                                                <div>
+                                                                    <h5 class="fs-14 my-1"><a href="apps-ecommerce-product-details.html" class="text-reset">Branded T-Shirts</a></h5>
+                                                                    <span class="text-muted">24 Apr 2021</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 my-1 fw-normal">$29.00</h5>
+                                                            <span class="text-muted">Price</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 my-1 fw-normal">62</h5>
+                                                            <span class="text-muted">Orders</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 my-1 fw-normal">510</h5>
+                                                            <span class="text-muted">Stock</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 my-1 fw-normal">$1,798</h5>
+                                                            <span class="text-muted">Amount</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="avatar-sm bg-light rounded p-1 me-2">
+                                                                    <img src="assets/images/products/img-2.png" alt="" class="img-fluid d-block" />
+                                                                </div>
+                                                                <div>
+                                                                    <h5 class="fs-14 my-1"><a href="apps-ecommerce-product-details.html" class="text-reset">Bentwood Chair</a></h5>
+                                                                    <span class="text-muted">19 Mar 2021</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 my-1 fw-normal">$85.20</h5>
+                                                            <span class="text-muted">Price</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 my-1 fw-normal">35</h5>
+                                                            <span class="text-muted">Orders</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 my-1 fw-normal"><span class="badge badge-soft-danger">Out of stock</span> </h5>
+                                                            <span class="text-muted">Stock</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 my-1 fw-normal">$2982</h5>
+                                                            <span class="text-muted">Amount</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="avatar-sm bg-light rounded p-1 me-2">
+                                                                    <img src="assets/images/products/img-3.png" alt="" class="img-fluid d-block" />
+                                                                </div>
+                                                                <div>
+                                                                    <h5 class="fs-14 my-1"><a href="apps-ecommerce-product-details.html" class="text-reset">Borosil Paper Cup</a></h5>
+                                                                    <span class="text-muted">01 Mar 2021</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 my-1 fw-normal">$14.00</h5>
+                                                            <span class="text-muted">Price</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 my-1 fw-normal">80</h5>
+                                                            <span class="text-muted">Orders</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 my-1 fw-normal">749</h5>
+                                                            <span class="text-muted">Stock</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 my-1 fw-normal">$1120</h5>
+                                                            <span class="text-muted">Amount</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="avatar-sm bg-light rounded p-1 me-2">
+                                                                    <img src="assets/images/products/img-4.png" alt="" class="img-fluid d-block" />
+                                                                </div>
+                                                                <div>
+                                                                    <h5 class="fs-14 my-1"><a href="apps-ecommerce-product-details.html" class="text-reset">One Seater Sofa</a></h5>
+                                                                    <span class="text-muted">11 Feb 2021</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 my-1 fw-normal">$127.50</h5>
+                                                            <span class="text-muted">Price</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 my-1 fw-normal">56</h5>
+                                                            <span class="text-muted">Orders</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 my-1 fw-normal"><span class="badge badge-soft-danger">Out of stock</span></h5>
+                                                            <span class="text-muted">Stock</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 my-1 fw-normal">$7140</h5>
+                                                            <span class="text-muted">Amount</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="avatar-sm bg-light rounded p-1 me-2">
+                                                                    <img src="assets/images/products/img-5.png" alt="" class="img-fluid d-block" />
+                                                                </div>
+                                                                <div>
+                                                                    <h5 class="fs-14 my-1"><a href="apps-ecommerce-product-details.html" class="text-reset">Stillbird Helmet</a></h5>
+                                                                    <span class="text-muted">17 Jan 2021</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 my-1 fw-normal">$54</h5>
+                                                            <span class="text-muted">Price</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 my-1 fw-normal">74</h5>
+                                                            <span class="text-muted">Orders</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 my-1 fw-normal">805</h5>
+                                                            <span class="text-muted">Stock</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 my-1 fw-normal">$3996</h5>
+                                                            <span class="text-muted">Amount</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
 
-            </div>
+                                        <div class="align-items-center mt-4 pt-2 justify-content-between d-flex">
+                                            <div class="flex-shrink-0">
+                                                <div class="text-muted">
+                                                    Showing <span class="fw-semibold">5</span> of <span class="fw-semibold">25</span> Results
+                                                </div>
+                                            </div>
+                                            <ul class="pagination pagination-separated pagination-sm mb-0">
+                                                <li class="page-item disabled">
+                                                    <a href="#" class="page-link">←</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a href="#" class="page-link">1</a>
+                                                </li>
+                                                <li class="page-item active">
+                                                    <a href="#" class="page-link">2</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a href="#" class="page-link">3</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a href="#" class="page-link">→</a>
+                                                </li>
+                                            </ul>
+                                        </div>
 
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 layout-spacing">
-                <div class="widget widget-five">
-                    <div class="widget-content">
-
-                        <div class="header">
-                            <div class="header-body">
-                                <h6>Pending Tasks</h6>
-                                <p class="meta-date">Nov 2019</p>
-                            </div>
-                            <div class="task-action">
-                                <div class="dropdown  custom-dropdown">
-                                    <a class="dropdown-toggle" href="#" role="button" id="pendingTask" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
-                                    </a>
-
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="pendingTask">
-                                        <a class="dropdown-item" href="javascript:void(0);">Add</a>
-                                        <a class="dropdown-item" href="javascript:void(0);">View</a>
-                                        <a class="dropdown-item" href="javascript:void(0);">Update</a>
-                                        <a class="dropdown-item" href="javascript:void(0);">Clear All</a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="w-content">
-                            <div class="">                                            
-                                <p class="task-left">8</p>
-                                <p class="task-completed"><span>12 Done</span></p>
-                                <p class="task-hight-priority"><span>3 Task</span> with High priotity</p>
+                            <div class="col-xl-6">
+                                <div class="card card-height-100">
+                                    <div class="card-header align-items-center d-flex">
+                                        <h4 class="card-title mb-0 flex-grow-1">Top Sellers</h4>
+                                        <div class="flex-shrink-0">
+                                            <div class="dropdown card-header-dropdown">
+                                                <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="text-muted">Report<i class="mdi mdi-chevron-down ms-1"></i></span>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" href="#">Download Report</a>
+                                                    <a class="dropdown-item" href="#">Export</a>
+                                                    <a class="dropdown-item" href="#">Import</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- end card header -->
+
+                                    <div class="card-body">
+                                        <div class="table-responsive table-card">
+                                            <table class="table table-centered table-hover align-middle table-nowrap mb-0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="flex-shrink-0 me-2">
+                                                                    <img src="assets/images/companies/img-1.png" alt="" class="avatar-sm p-2" />
+                                                                </div>
+                                                                <div>
+                                                                    <h5 class="fs-14 my-1 fw-medium">
+                                                                        <a href="apps-ecommerce-seller-details.html" class="text-reset">iTest Factory</a>
+                                                                    </h5>
+                                                                    <span class="text-muted">Oliver Tyler</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="text-muted">Bags and Wallets</span>
+                                                        </td>
+                                                        <td>
+                                                            <p class="mb-0">8547</p>
+                                                            <span class="text-muted">Stock</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="text-muted">$541200</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 mb-0">32%<i class="ri-bar-chart-fill text-success fs-16 align-middle ms-2"></i></h5>
+                                                        </td>
+                                                    </tr><!-- end -->
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="flex-shrink-0 me-2">
+                                                                    <img src="assets/images/companies/img-2.png" alt="" class="avatar-sm p-2" />
+                                                                </div>
+                                                                <div class="flex-grow-1">
+                                                                    <h5 class="fs-14 my-1 fw-medium"><a href="apps-ecommerce-seller-details.html" class="text-reset">Digitech Galaxy</a></h5>
+                                                                    <span class="text-muted">John Roberts</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="text-muted">Watches</span>
+                                                        </td>
+                                                        <td>
+                                                            <p class="mb-0">895</p>
+                                                            <span class="text-muted">Stock</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="text-muted">$75030</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 mb-0">79%<i class="ri-bar-chart-fill text-success fs-16 align-middle ms-2"></i></h5>
+                                                        </td>
+                                                    </tr><!-- end -->
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="flex-shrink-0 me-2">
+                                                                    <img src="assets/images/companies/img-3.png" alt="" class="avatar-sm p-2" />
+                                                                </div>
+                                                                <div class="flex-gow-1">
+                                                                    <h5 class="fs-14 my-1 fw-medium"><a href="apps-ecommerce-seller-details.html" class="text-reset">Nesta Technologies</a></h5>
+                                                                    <span class="text-muted">Harley Fuller</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="text-muted">Bike Accessories</span>
+                                                        </td>
+                                                        <td>
+                                                            <p class="mb-0">3470</p>
+                                                            <span class="text-muted">Stock</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="text-muted">$45600</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 mb-0">90%<i class="ri-bar-chart-fill text-success fs-16 align-middle ms-2"></i></h5>
+                                                        </td>
+                                                    </tr><!-- end -->
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="flex-shrink-0 me-2">
+                                                                    <img src="assets/images/companies/img-8.png" alt="" class="avatar-sm p-2" />
+                                                                </div>
+                                                                <div class="flex-grow-1">
+                                                                    <h5 class="fs-14 my-1 fw-medium"><a href="apps-ecommerce-seller-details.html" class="text-reset">Zoetic Fashion</a></h5>
+                                                                    <span class="text-muted">James Bowen</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="text-muted">Clothes</span>
+                                                        </td>
+                                                        <td>
+                                                            <p class="mb-0">5488</p>
+                                                            <span class="text-muted">Stock</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="text-muted">$29456</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 mb-0">40%<i class="ri-bar-chart-fill text-success fs-16 align-middle ms-2"></i></h5>
+                                                        </td>
+                                                    </tr><!-- end -->
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="flex-shrink-0 me-2">
+                                                                    <img src="assets/images/companies/img-5.png" alt="" class="avatar-sm p-2" />
+                                                                </div>
+                                                                <div class="flex-grow-1">
+                                                                    <h5 class="fs-14 my-1 fw-medium">
+                                                                        <a href="apps-ecommerce-seller-details.html" class="text-reset">Meta4Systems</a>
+                                                                    </h5>
+                                                                    <span class="text-muted">Zoe Dennis</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="text-muted">Furniture</span>
+                                                        </td>
+                                                        <td>
+                                                            <p class="mb-0">4100</p>
+                                                            <span class="text-muted">Stock</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="text-muted">$11260</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 mb-0">57%<i class="ri-bar-chart-fill text-success fs-16 align-middle ms-2"></i></h5>
+                                                        </td>
+                                                    </tr><!-- end -->
+                                                </tbody>
+                                            </table><!-- end table -->
+                                        </div>
+
+                                        <div class="align-items-center mt-4 pt-2 justify-content-between d-flex">
+                                            <div class="flex-shrink-0">
+                                                <div class="text-muted">
+                                                    Showing <span class="fw-semibold">5</span> of <span class="fw-semibold">25</span> Results
+                                                </div>
+                                            </div>
+                                            <ul class="pagination pagination-separated pagination-sm mb-0">
+                                                <li class="page-item disabled">
+                                                    <a href="#" class="page-link">←</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a href="#" class="page-link">1</a>
+                                                </li>
+                                                <li class="page-item active">
+                                                    <a href="#" class="page-link">2</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a href="#" class="page-link">3</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a href="#" class="page-link">→</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div> <!-- .card-body-->
+                                </div> <!-- .card-->
+                            </div> <!-- .col-->
+                        </div> <!-- end row-->
+
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <div class="card card-height-100">
+                                    <div class="card-header align-items-center d-flex">
+                                        <h4 class="card-title mb-0 flex-grow-1">Store Visits by Source</h4>
+                                        <div class="flex-shrink-0">
+                                            <div class="dropdown card-header-dropdown">
+                                                <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="text-muted">Report<i class="mdi mdi-chevron-down ms-1"></i></span>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" href="#">Download Report</a>
+                                                    <a class="dropdown-item" href="#">Export</a>
+                                                    <a class="dropdown-item" href="#">Import</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- end card header -->
+
+                                    <div class="card-body">
+                                        <div id="store-visits-source" data-colors='["--vz-primary", "--vz-success", "--vz-warning", "--vz-danger", "--vz-info"]' class="apex-charts" dir="ltr"></div>
+                                    </div>
+                                </div> <!-- .card-->
+                            </div> <!-- .col-->
+
+                            <div class="col-xl-8">
+                                <div class="card">
+                                    <div class="card-header align-items-center d-flex">
+                                        <h4 class="card-title mb-0 flex-grow-1">Recent Orders</h4>
+                                        <div class="flex-shrink-0">
+                                            <button type="button" class="btn btn-soft-info btn-sm">
+                                                <i class="ri-file-list-3-line align-middle"></i> Generate Report
+                                            </button>
+                                        </div>
+                                    </div><!-- end card header -->
+
+                                    <div class="card-body">
+                                        <div class="table-responsive table-card">
+                                            <table class="table table-borderless table-centered align-middle table-nowrap mb-0">
+                                                <thead class="text-muted table-light">
+                                                    <tr>
+                                                        <th scope="col">Order ID</th>
+                                                        <th scope="col">Customer</th>
+                                                        <th scope="col">Product</th>
+                                                        <th scope="col">Amount</th>
+                                                        <th scope="col">Vendor</th>
+                                                        <th scope="col">Status</th>
+                                                        <th scope="col">Rating</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="apps-ecommerce-order-details.html" class="fw-medium link-primary">#VZ2112</a>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="flex-shrink-0 me-2">
+                                                                    <img src="assets/images/users/avatar-1.jpg" alt="" class="avatar-xs rounded-circle" />
+                                                                </div>
+                                                                <div class="flex-grow-1">Alex Smith</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>Clothes</td>
+                                                        <td>
+                                                            <span class="text-success">$109.00</span>
+                                                        </td>
+                                                        <td>Zoetic Fashion</td>
+                                                        <td>
+                                                            <span class="badge badge-soft-success">Paid</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 fw-medium mb-0">5.0<span class="text-muted fs-11 ms-1">(61 votes)</span></h5>
+                                                        </td>
+                                                    </tr><!-- end tr -->
+                                                    <tr>
+                                                        <td>
+                                                            <a href="apps-ecommerce-order-details.html" class="fw-medium link-primary">#VZ2111</a>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="flex-shrink-0 me-2">
+                                                                    <img src="assets/images/users/avatar-2.jpg" alt="" class="avatar-xs rounded-circle" />
+                                                                </div>
+                                                                <div class="flex-grow-1">Jansh Brown</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>Kitchen Storage</td>
+                                                        <td>
+                                                            <span class="text-success">$149.00</span>
+                                                        </td>
+                                                        <td>Micro Design</td>
+                                                        <td>
+                                                            <span class="badge badge-soft-warning">Pending</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 fw-medium mb-0">4.5<span class="text-muted fs-11 ms-1">(61 votes)</span></h5>
+                                                        </td>
+                                                    </tr><!-- end tr -->
+                                                    <tr>
+                                                        <td>
+                                                            <a href="apps-ecommerce-order-details.html" class="fw-medium link-primary">#VZ2109</a>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="flex-shrink-0 me-2">
+                                                                    <img src="assets/images/users/avatar-3.jpg" alt="" class="avatar-xs rounded-circle" />
+                                                                </div>
+                                                                <div class="flex-grow-1">Ayaan Bowen</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>Bike Accessories</td>
+                                                        <td>
+                                                            <span class="text-success">$215.00</span>
+                                                        </td>
+                                                        <td>Nesta Technologies</td>
+                                                        <td>
+                                                            <span class="badge badge-soft-success">Paid</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 fw-medium mb-0">4.9<span class="text-muted fs-11 ms-1">(89 votes)</span></h5>
+                                                        </td>
+                                                    </tr><!-- end tr -->
+                                                    <tr>
+                                                        <td>
+                                                            <a href="apps-ecommerce-order-details.html" class="fw-medium link-primary">#VZ2108</a>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="flex-shrink-0 me-2">
+                                                                    <img src="assets/images/users/avatar-4.jpg" alt="" class="avatar-xs rounded-circle" />
+                                                                </div>
+                                                                <div class="flex-grow-1">Prezy Mark</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>Furniture</td>
+                                                        <td>
+                                                            <span class="text-success">$199.00</span>
+                                                        </td>
+                                                        <td>Syntyce Solutions</td>
+                                                        <td>
+                                                            <span class="badge badge-soft-danger">Unpaid</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 fw-medium mb-0">4.3<span class="text-muted fs-11 ms-1">(47 votes)</span></h5>
+                                                        </td>
+                                                    </tr><!-- end tr -->
+                                                    <tr>
+                                                        <td>
+                                                            <a href="apps-ecommerce-order-details.html" class="fw-medium link-primary">#VZ2107</a>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="flex-shrink-0 me-2">
+                                                                    <img src="assets/images/users/avatar-6.jpg" alt="" class="avatar-xs rounded-circle" />
+                                                                </div>
+                                                                <div class="flex-grow-1">Vihan Hudda</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>Bags and Wallets</td>
+                                                        <td>
+                                                            <span class="text-success">$330.00</span>
+                                                        </td>
+                                                        <td>iTest Factory</td>
+                                                        <td>
+                                                            <span class="badge badge-soft-success">Paid</span>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="fs-14 fw-medium mb-0">4.7<span class="text-muted fs-11 ms-1">(161 votes)</span></h5>
+                                                        </td>
+                                                    </tr><!-- end tr -->
+                                                </tbody><!-- end tbody -->
+                                            </table><!-- end table -->
+                                        </div>
+                                    </div>
+                                </div> <!-- .card-->
+                            </div> <!-- .col-->
+                        </div> <!-- end row-->
+
+                    </div> <!-- end .h-100-->
+
+                </div> <!-- end col -->
+
+                <div class="col-auto layout-rightside-col">
+                    <div class="overlay"></div>
+                    <div class="layout-rightside">
+                        <div class="card h-100 rounded-0">
+                            <div class="card-body p-0">
+                                <div class="p-3">
+                                    <h6 class="text-muted mb-0 text-uppercase fw-semibold">Recent Activity</h6>
+                                </div>
+                                <div data-simplebar style="max-height: 410px;" class="p-3 pt-0">
+                                    <div class="acitivity-timeline acitivity-main">
+                                        <div class="acitivity-item d-flex">
+                                            <div class="flex-shrink-0 avatar-xs acitivity-avatar">
+                                                <div class="avatar-title bg-soft-success text-success rounded-circle">
+                                                    <i class="ri-shopping-cart-2-line"></i>
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h6 class="mb-1 lh-base">Purchase by James Price</h6>
+                                                <p class="text-muted mb-1">Product noise evolve smartwatch </p>
+                                                <small class="mb-0 text-muted">02:14 PM Today</small>
+                                            </div>
+                                        </div>
+                                        <div class="acitivity-item py-3 d-flex">
+                                            <div class="flex-shrink-0 avatar-xs acitivity-avatar">
+                                                <div class="avatar-title bg-soft-danger text-danger rounded-circle">
+                                                    <i class="ri-stack-fill"></i>
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h6 class="mb-1 lh-base">Added new <span class="fw-semibold">style collection</span></h6>
+                                                <p class="text-muted mb-1">By Nesta Technologies</p>
+                                                <div class="d-inline-flex gap-2 border border-dashed p-2 mb-2">
+                                                    <a href="apps-ecommerce-product-details.html" class="bg-light rounded p-1">
+                                                        <img src="assets/images/products/img-8.png" alt="" class="img-fluid d-block" />
+                                                    </a>
+                                                    <a href="apps-ecommerce-product-details.html" class="bg-light rounded p-1">
+                                                        <img src="assets/images/products/img-2.png" alt="" class="img-fluid d-block" />
+                                                    </a>
+                                                    <a href="apps-ecommerce-product-details.html" class="bg-light rounded p-1">
+                                                        <img src="assets/images/products/img-10.png" alt="" class="img-fluid d-block" />
+                                                    </a>
+                                                </div>
+                                                <p class="mb-0 text-muted"><small>9:47 PM Yesterday</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="acitivity-item py-3 d-flex">
+                                            <div class="flex-shrink-0">
+                                                <img src="assets/images/users/avatar-2.jpg" alt="" class="avatar-xs rounded-circle acitivity-avatar">
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h6 class="mb-1 lh-base">Natasha Carey have liked the products</h6>
+                                                <p class="text-muted mb-1">Allow users to like products in your WooCommerce store.</p>
+                                                <small class="mb-0 text-muted">25 Dec, 2021</small>
+                                            </div>
+                                        </div>
+                                        <div class="acitivity-item py-3 d-flex">
+                                            <div class="flex-shrink-0">
+                                                <div class="avatar-xs acitivity-avatar">
+                                                    <div class="avatar-title rounded-circle bg-secondary">
+                                                        <i class="mdi mdi-sale fs-14"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h6 class="mb-1 lh-base">Today offers by <a href="apps-ecommerce-seller-details.html" class="link-secondary">Digitech Galaxy</a></h6>
+                                                <p class="text-muted mb-2">Offer is valid on orders of Rs.500 Or above for selected products only.</p>
+                                                <small class="mb-0 text-muted">12 Dec, 2021</small>
+                                            </div>
+                                        </div>
+                                        <div class="acitivity-item py-3 d-flex">
+                                            <div class="flex-shrink-0">
+                                                <div class="avatar-xs acitivity-avatar">
+                                                    <div class="avatar-title rounded-circle bg-soft-danger text-danger">
+                                                        <i class="ri-bookmark-fill"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h6 class="mb-1 lh-base">Favoried Product</h6>
+                                                <p class="text-muted mb-2">Esther James have favorited product.</p>
+                                                <small class="mb-0 text-muted">25 Nov, 2021</small>
+                                            </div>
+                                        </div>
+                                        <div class="acitivity-item py-3 d-flex">
+                                            <div class="flex-shrink-0">
+                                                <div class="avatar-xs acitivity-avatar">
+                                                    <div class="avatar-title rounded-circle bg-secondary">
+                                                        <i class="mdi mdi-sale fs-14"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h6 class="mb-1 lh-base">Flash sale starting <span class="text-primary">Tomorrow.</span></h6>
+                                                <p class="text-muted mb-0">Flash sale by <a href="javascript:void(0);" class="link-secondary fw-medium">Zoetic Fashion</a></p>
+                                                <small class="mb-0 text-muted">22 Oct, 2021</small>
+                                            </div>
+                                        </div>
+                                        <div class="acitivity-item py-3 d-flex">
+                                            <div class="flex-shrink-0">
+                                                <div class="avatar-xs acitivity-avatar">
+                                                    <div class="avatar-title rounded-circle bg-soft-info text-info">
+                                                        <i class="ri-line-chart-line"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h6 class="mb-1 lh-base">Monthly sales report</h6>
+                                                <p class="text-muted mb-2"><span class="text-danger">2 days left</span> notification to submit the monthly sales report. <a href="javascript:void(0);" class="link-warning text-decoration-underline">Reports Builder</a></p>
+                                                <small class="mb-0 text-muted">15 Oct</small>
+                                            </div>
+                                        </div>
+                                        <div class="acitivity-item d-flex">
+                                            <div class="flex-shrink-0">
+                                                <img src="assets/images/users/avatar-3.jpg" alt="" class="avatar-xs rounded-circle acitivity-avatar" />
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h6 class="mb-1 lh-base">Frank Hook Commented</h6>
+                                                <p class="text-muted mb-2 fst-italic">" A product that has reviews is more likable to be sold than a product. "</p>
+                                                <small class="mb-0 text-muted">26 Aug, 2021</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-3 mt-2">
+                                    <h6 class="text-muted mb-3 text-uppercase fw-semibold">Top 10 Categories
+                                    </h6>
+
+                                    <ol class="ps-3 text-muted">
+                                        <li class="py-1">
+                                            <a href="#" class="text-muted">Mobile & Accessories <span class="float-end">(10,294)</span></a>
+                                        </li>
+                                        <li class="py-1">
+                                            <a href="#" class="text-muted">Desktop <span class="float-end">(6,256)</span></a>
+                                        </li>
+                                        <li class="py-1">
+                                            <a href="#" class="text-muted">Electronics <span class="float-end">(3,479)</span></a>
+                                        </li>
+                                        <li class="py-1">
+                                            <a href="#" class="text-muted">Home & Furniture <span class="float-end">(2,275)</span></a>
+                                        </li>
+                                        <li class="py-1">
+                                            <a href="#" class="text-muted">Grocery <span class="float-end">(1,950)</span></a>
+                                        </li>
+                                        <li class="py-1">
+                                            <a href="#" class="text-muted">Fashion <span class="float-end">(1,582)</span></a>
+                                        </li>
+                                        <li class="py-1">
+                                            <a href="#" class="text-muted">Appliances <span class="float-end">(1,037)</span></a>
+                                        </li>
+                                        <li class="py-1">
+                                            <a href="#" class="text-muted">Beauty, Toys & More <span class="float-end">(924)</span></a>
+                                        </li>
+                                        <li class="py-1">
+                                            <a href="#" class="text-muted">Food & Drinks <span class="float-end">(701)</span></a>
+                                        </li>
+                                        <li class="py-1">
+                                            <a href="#" class="text-muted">Toys & Games <span class="float-end">(239)</span></a>
+                                        </li>
+                                    </ol>
+                                    <div class="mt-3 text-center">
+                                        <a href="javascript:void(0);" class="text-muted text-decoration-underline">View all Categories</a>
+                                    </div>
+                                </div>
+                                <div class="p-3">
+                                    <h6 class="text-muted mb-3 text-uppercase fw-semibold">Products Reviews</h6>
+                                    <!-- Swiper -->
+                                    <div class="swiper vertical-swiper" style="height: 250px;">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="card border border-dashed shadow-none">
+                                                    <div class="card-body">
+                                                        <div class="d-flex">
+                                                            <div class="flex-shrink-0 avatar-sm">
+                                                                <div class="avatar-title bg-light rounded">
+                                                                    <img src="assets/images/companies/img-1.png" alt="" height="30">
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <div>
+                                                                    <p class="text-muted mb-1 fst-italic text-truncate-two-lines"> " Great product and looks great, lots of features. "</p>
+                                                                    <div
+                                                                        class="fs-11 align-middle text-warning">
+                                                                        <i class="ri-star-fill"></i>
+                                                                        <i class="ri-star-fill"></i>
+                                                                        <i class="ri-star-fill"></i>
+                                                                        <i class="ri-star-fill"></i>
+                                                                        <i class="ri-star-fill"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="text-end mb-0 text-muted">
+                                                                    - by <cite title="Source Title">Force Medicines</cite>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="card border border-dashed shadow-none">
+                                                    <div class="card-body">
+                                                        <div class="d-flex">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="assets/images/users/avatar-3.jpg" alt="" class="avatar-sm rounded">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <div>
+                                                                    <p class="text-muted mb-1 fst-italic text-truncate-two-lines"> " Amazing template, very easy to understand and manipulate. "</p>
+                                                                    <div class="fs-11 align-middle text-warning">
+                                                                        <i class="ri-star-fill"></i>
+                                                                        <i class="ri-star-fill"></i>
+                                                                        <i class="ri-star-fill"></i>
+                                                                        <i class="ri-star-fill"></i>
+                                                                        <i class="ri-star-half-fill"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="text-end mb-0 text-muted">
+                                                                    - by <cite title="Source Title">Henry Baird</cite>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="card border border-dashed shadow-none">
+                                                    <div class="card-body">
+                                                        <div class="d-flex">
+                                                            <div class="flex-shrink-0 avatar-sm">
+                                                                <div class="avatar-title bg-light rounded">
+                                                                    <img src="assets/images/companies/img-8.png" alt="" height="30">
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <div>
+                                                                    <p class="text-muted mb-1 fst-italic text-truncate-two-lines"> "Very beautiful product and Very helpful customer service."</p>
+                                                                    <div class="fs-11 align-middle text-warning">
+                                                                        <i class="ri-star-fill"></i>
+                                                                        <i class="ri-star-fill"></i>
+                                                                        <i class="ri-star-fill"></i>
+                                                                        <i class="ri-star-line"></i>
+                                                                        <i class="ri-star-line"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="text-end mb-0 text-muted">
+                                                                    - by <cite title="Source Title">Zoetic Fashion</cite>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="card border border-dashed shadow-none">
+                                                    <div class="card-body">
+                                                        <div class="d-flex">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="assets/images/users/avatar-2.jpg" alt="" class="avatar-sm rounded">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <div>
+                                                                    <p class="text-muted mb-1 fst-italic text-truncate-two-lines">" The product is very beautiful. I like it. "</p>
+                                                                    <div class="fs-11 align-middle text-warning">
+                                                                        <i class="ri-star-fill"></i>
+                                                                        <i class="ri-star-fill"></i>
+                                                                        <i class="ri-star-fill"></i>
+                                                                        <i class="ri-star-half-fill"></i>
+                                                                        <i class="ri-star-line"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="text-end mb-0 text-muted">
+                                                                    - by <cite title="Source Title">Nancy Martino</cite>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-3">
+                                    <h6 class="text-muted mb-3 text-uppercase fw-semibold">Customer Reviews</h6>
+                                    <div class="bg-light px-3 py-2 rounded-2 mb-2">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <div class="fs-16 align-middle text-warning">
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-half-fill"></i>
+                                                </div>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <h6 class="mb-0">4.5 out of 5</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-muted">Total <span class="fw-medium">5.50k</span> reviews</div>
+                                    </div>
+
+                                    <div class="mt-3">
+                                        <div class="row align-items-center g-2">
+                                            <div class="col-auto">
+                                                <div class="p-1">
+                                                    <h6 class="mb-0">5 star</h6>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="p-1">
+                                                    <div class="progress animated-progress progress-sm">
+                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 50.16%" aria-valuenow="50.16" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="p-1">
+                                                    <h6 class="mb-0 text-muted">2758</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end row -->
+
+                                        <div class="row align-items-center g-2">
+                                            <div class="col-auto">
+                                                <div class="p-1">
+                                                    <h6 class="mb-0">4 star</h6>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="p-1">
+                                                    <div class="progress animated-progress progress-sm">
+                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 29.32%" aria-valuenow="29.32" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="p-1">
+                                                    <h6 class="mb-0 text-muted">1063</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end row -->
+
+                                        <div class="row align-items-center g-2">
+                                            <div class="col-auto">
+                                                <div class="p-1">
+                                                    <h6 class="mb-0">3 star</h6>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="p-1">
+                                                    <div class="progress animated-progress progress-sm">
+                                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 18.12%" aria-valuenow="18.12" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="p-1">
+                                                    <h6 class="mb-0 text-muted">997</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end row -->
+
+                                        <div class="row align-items-center g-2">
+                                            <div class="col-auto">
+                                                <div class="p-1">
+                                                    <h6 class="mb-0">2 star</h6>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="p-1">
+                                                    <div class="progress animated-progress progress-sm">
+                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 4.98%" aria-valuenow="4.98" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-auto">
+                                                <div class="p-1">
+                                                    <h6 class="mb-0 text-muted">227</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end row -->
+
+                                        <div class="row align-items-center g-2">
+                                            <div class="col-auto">
+                                                <div class="p-1">
+                                                    <h6 class="mb-0">1 star</h6>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="p-1">
+                                                    <div class="progress animated-progress progress-sm">
+                                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 7.42%" aria-valuenow="7.42" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="p-1">
+                                                    <h6 class="mb-0 text-muted">408</h6>
+                                                </div>
+                                            </div>
+                                        </div><!-- end row -->
+                                    </div>
+                                </div>
+
+                                <div class="card sidebar-alert bg-light border-0 text-center mx-4 mb-0 mt-3">
+                                    <div class="card-body">
+                                        <img src="assets/images/giftbox.png" alt="">
+                                        <div class="mt-4">
+                                            <h5>Invite New Seller</h5>
+                                            <p class="text-muted lh-base">Refer a new seller to us and earn $100 per refer.</p>
+                                            <button type="button" class="btn btn-primary btn-label rounded-pill"><i class="ri-mail-fill label-icon align-middle rounded-pill fs-16 me-2"></i> Invite Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                        </div>
-                    </div>
-                </div>
+                        </div> <!-- end card-->
+                    </div> <!-- end .rightbar-->
 
-            </div>
-
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
-                <div class="widget widget-card-two">
-                    <div class="widget-content">
-
-                        <div class="media">
-                            <div class="w-img">
-                                <img src="assets/img/90x90.jpg" alt="avatar">
-                            </div>
-                            <div class="media-body">
-                                <h6>Dev Summit - New York</h6>
-                                <p class="meta-date-time">Bronx, NY</p>
-                            </div>
-                        </div>
-
-                        <div class="card-bottom-section">
-                            <h5>4 Members Going</h5>
-                            <div class="img-group">
-                                <img src="assets/img/90x90.jpg" alt="avatar">
-                                <img src="assets/img/90x90.jpg" alt="avatar">
-                                <img src="assets/img/90x90.jpg" alt="avatar">
-                                <img src="assets/img/90x90.jpg" alt="avatar">
-                            </div>
-                            <a href="javascript:void(0);" class="btn">View Details</a>
-                        </div>
-                    </div>
-                </div>
+                </div> <!-- end col -->
             </div>
 
         </div>
+        <!-- container-fluid -->
     </div>
+    <!-- End Page-content -->
 
-    <div class="footer-wrapper">
-        <div class="footer-section f-section-1">
-            <p class="">Copyright © 2020 <a target="_blank" href="https://designreset.com">DesignReset</a>, All rights reserved.</p>
-        </div>
-        <div class="footer-section f-section-2">
-            <p class="">Coded with <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></p>
-        </div>
-    </div>
+    @include('layouts.admin.footer')
 </div>
 @endsection

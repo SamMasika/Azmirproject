@@ -32,9 +32,9 @@ class AuthController extends Controller
                 return redirect('/')->withInput();
             }
 
-            $token = cookie('access_token',  $result_api->access_token, 30);
-            $fullname = cookie('name',  $result_api->user->name, 30);
-           $username = cookie('username',  $result_api->user->username, 30);
+            $token = cookie('access_token',  $result_api->access_token, 240);
+            $fullname = cookie('name',  $result_api->user->name, 240);
+           $username = cookie('username',  $result_api->user->username, 240);
           
             
             Session::flash('success',' '. $result_api->message);
